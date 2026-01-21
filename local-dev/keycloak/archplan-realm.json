@@ -1,0 +1,59 @@
+{
+  "realm": "archplan",
+  "enabled": true,
+  "registrationAllowed": false,
+  "loginWithEmailAllowed": true,
+  "resetPasswordAllowed": true,
+  "loginTheme": "archplan",
+  "roles": {
+    "realm": [
+      { "name": "PM Role", "description": "Project Manager" },
+      { "name": "system-full-access", "description": "system-full-access" }
+    ]
+  },
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "firstName": "System",
+      "lastName": "Admin",
+      "email": "admin@local.com",
+      "credentials": [ { "type": "password", "value": "admin", "temporary": false } ],
+      "realmRoles": ["SYSADM"]
+    },
+    {
+      "username": "pm1",
+      "enabled": true,
+      "firstName": "Project",
+      "lastName": "Manager",
+      "email": "pm1@local.com",
+      "credentials": [ { "type": "password", "value": "password", "temporary": false } ],
+      "realmRoles": ["PM Role"]
+    }
+  ],
+  "clients": [
+    {
+      "clientId": "archplan-frontend",
+      "name": "Architect Project Planer Frontend",
+      "publicClient": true,
+      "protocol": "openid-connect",
+      "standardFlowEnabled": true,
+      "implicitFlowEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "redirectUris": ["http://localhost:8080/*", "http://127.0.0.1:8080/*"],
+      "webOrigins": ["+"]
+    },
+    {
+      "clientId": "archplan-backend",
+      "name": "Architect Project Planer",
+      "publicClient": false,
+      "protocol": "openid-connect",
+      "serviceAccountsEnabled": false,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "redirectUris": ["http://localhost:8080/*", "http://127.0.0.1:8080/*"],
+      "secret": "changeme-in-prod"
+    }
+  ]
+}

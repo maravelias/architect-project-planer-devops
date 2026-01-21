@@ -22,6 +22,7 @@ The local stack includes the following services:
 | **Prometheus** | `172.40.0.14` | `9090` | - |
 | **Loki** | `172.40.0.15` | `3100` | - |
 | **Grafana** | `172.40.0.17` | `3000` | User: `admin`, Pass: `admin` |
+| **Keycloak** | `172.50.0.19` | `5080` | User: `admin`, Pass: `admin` |
 | **Nginx** | `172.40.0.16` | `80` | - |
 | **MailHog (Web UI)** | `172.40.0.18` | `8025` | - |
 | **MailHog (SMTP)** | `172.40.0.18` | `1025` | - |
@@ -55,6 +56,12 @@ The local stack includes the following services:
 
 ### 🌐 Web Server (Nginx)
 - **URL:** [http://localhost:80](http://localhost:80)
+
+### 🔐 Identity Provider (Keycloak)
+- **URL:** [http://localhost:5080](http://localhost:5080)
+- **Admin Username:** `admin`
+- **Admin Password:** `admin`
+- **Realm:** `archplan` (pre-configured)
 
 ### ✉️ Email Testing (MailHog)
 - **Web UI:** [http://localhost:8025](http://localhost:8025)

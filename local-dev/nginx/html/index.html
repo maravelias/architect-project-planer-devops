@@ -39,6 +39,7 @@
           <div><a href="http://localhost:9000" target="_blank" rel="noopener">🔍 SonarQube</a></div>
           <div><a href="http://localhost:8025" target="_blank" rel="noopener">✉️ MailHog</a></div>
           <div><a href="http://localhost:5050" target="_blank" rel="noopener">🐘 pgAdmin</a></div>
+          <div><a href="http://localhost:5080" target="_blank" rel="noopener">🔐 Keycloak</a></div>
         </div>
       </div>
 
@@ -90,6 +91,12 @@
             <td><code>admin</code> / <code>admin</code></td>
           </tr>
           <tr>
+            <td><strong>Keycloak</strong></td>
+            <td><code>172.50.0.19</code></td>
+            <td><code>5080</code> (Mapped to <code>8080</code>)</td>
+            <td><code>admin</code> / <code>admin</code></td>
+          </tr>
+          <tr>
             <td><strong>MailHog</strong></td>
             <td><code>172.50.0.18</code></td>
             <td><code>8025</code> (Web), <code>1025</code> (SMTP)</td>
@@ -106,6 +113,14 @@
         <li><strong>Port:</strong> <code>5432</code></li>
         <li><strong>Database:</strong> <code>archplan</code></li>
         <li><strong>Connection String:</strong> <code>postgresql://postgres:P@ssw0rd@localhost:5432/archplan</code></li>
+      </ul>
+
+      <h3>🔐 Identity Provider (Keycloak)</h3>
+      <ul>
+        <li><strong>URL:</strong> <a href="http://localhost:5080" target="_blank">http://localhost:5080</a></li>
+        <li><strong>Admin Console:</strong> <a href="http://localhost:5080/admin" target="_blank">http://localhost:5080/admin</a></li>
+        <li><strong>Admin Credentials:</strong> <code>admin</code> / <code>admin</code></li>
+        <li><strong>Realm:</strong> <code>archplan</code></li>
       </ul>
 
       <h3>✉️ Email Testing (MailHog)</h3>
