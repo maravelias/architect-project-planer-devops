@@ -1,0 +1,37 @@
+server:
+  http_listen_port: 3100
+  grpc_listen_port: 9096
+
+auth_enabled: false  # Local dev: single-tenant mode; avoids X-Scope-OrgID header
+
+common:
+  instance_addr: 172.50.0.15
+  path_prefix: /loki
+  storage:
+    filesystem:
+      chunks_directory: /loki/chunks
+      rules_directory: /loki/rules
+  replication_factor: 1
+  ring:
+    instance_addr: 172.50.0.15
+    kvstore:
+      store: inmemory
+
+schema_config:
+  configs:
+    - from: 2024-01-01
+      store: tsdb
+      object_store: filesystem
+      schema: v13
+      index:
+        prefix: index_
+        period: 24h
+
+ruler:
+  storage:
+    type: local
+    local:
+      directory: /loki/rules
+
+analytics:
+  reporting_enabled: false
