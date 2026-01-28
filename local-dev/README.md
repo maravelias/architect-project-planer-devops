@@ -16,26 +16,26 @@ The local stack includes the following services:
 
 | Service | Internal IP | External Port | Credentials (if applicable) |
 | :--- | :--- | :--- | :--- |
-| **PostgreSQL** | `172.40.0.10` | `5432` | User: `postgres`, Pass: `P@ssw0rd`, DB: `carrental` |
-| **pgAdmin** | `172.40.0.19` | `5050` | Email: `admin@local.com`, Pass: `admin` |
-| **SonarQube** | `172.40.0.13` | `9000` | - |
-| **Prometheus** | `172.40.0.14` | `9090` | - |
-| **Loki** | `172.40.0.15` | `3100` | - |
-| **Grafana** | `172.40.0.17` | `3000` | User: `admin`, Pass: `admin` |
-| **Keycloak** | `172.50.0.19` | `5080` | User: `admin`, Pass: `admin` |
-| **Nginx** | `172.40.0.16` | `80` | - |
-| **MailHog (Web UI)** | `172.40.0.18` | `8025` | - |
-| **MailHog (SMTP)** | `172.40.0.18` | `1025` | - |
+| **PostgreSQL** | `172.50.0.10` | `5432` | User: `postgres`, Pass: `P@ssw0rd`, DB: `archplan` |
+| **pgAdmin** | `172.50.0.19` | `5050` | Email: `admin@local.com`, Pass: `admin` |
+| **SonarQube** | `172.50.0.13` | `9000` | - |
+| **Prometheus** | `172.50.0.14` | `9090` | - |
+| **Loki** | `172.50.0.15` | `3100` | - |
+| **Grafana** | `172.50.0.17` | `3001` | User: `admin`, Pass: `admin` |
+| **Keycloak** | `172.50.0.21` | `5080` | User: `admin`, Pass: `admin` |
+| **Nginx** | `172.50.0.16` | `80` | - |
+| **MailHog (Web UI)** | `172.50.0.18` | `8025` | - |
+| **MailHog (SMTP)** | `172.50.0.18` | `1025` | - |
 
 ## Detailed Access Information
 
 ### 🐘 Database (PostgreSQL)
 - **Host:** `localhost`
 - **Port:** `5432`
-- **Database:** `archprojectplanner`
+- **Database:** `archplan`
 - **Username:** `postgres`
 - **Password:** `P@ssw0rd`
-- **Connection String:** `postgresql://postgres:P@ssw0rd@localhost:5432/archprojectplanner`
+- **Connection String:** `postgresql://postgres:P@ssw0rd@localhost:5432/archplan`
 
 ### 🛠️ pgAdmin
 - **URL:** [http://localhost:5050](http://localhost:5050)
@@ -47,7 +47,7 @@ The local stack includes the following services:
 
 ### 📈 Monitoring (Prometheus & Grafana)
 - **Prometheus:** [http://localhost:9090](http://localhost:9090)
-- **Grafana:** [http://localhost:3000](http://localhost:3000)
+- **Grafana:** [http://localhost:3001](http://localhost:3001)
   - **Username:** `admin`
   - **Password:** `admin`
 
@@ -82,4 +82,16 @@ spring.mail.properties.mail.smtp.ssl.enable=false
 ```
 
 ## Network Configuration
-The services run on a dedicated bridge network `archprojectplanner-network` with the subnet `172.50.0.0/24`.
+The services run on a dedicated bridge network `archplan-network` with the subnet `172.50.0.0/24`.
+
+## Update workflow
+Pull latest changes and restart the stack:
+
+```bash
+bash local-dev/scripts/update-stack.sh
+```
+
+Full reset (destructive: removes volumes and network, wipes data):
+```bash
+bash local-dev/scripts/update-stack.sh --full-reset
+```
