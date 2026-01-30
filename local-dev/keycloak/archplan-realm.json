@@ -21,7 +21,7 @@
       "lastName": "Admin",
       "email": "admin@local.com",
       "credentials": [ { "type": "password", "value": "admin", "temporary": false } ],
-      "realmRoles": ["SYSADM"]
+      "realmRoles": ["SYSADM" , "system-full-access" ]
     },
     {
       "username": "pm1",
@@ -30,7 +30,7 @@
       "lastName": "Manager",
       "email": "pm1@local.com",
       "credentials": [ { "type": "password", "value": "password", "temporary": false } ],
-      "realmRoles": ["PM Role"]
+      "realmRoles": ["PM Role" , "system-full-access" ]
     }
   ],
   "clients": [
