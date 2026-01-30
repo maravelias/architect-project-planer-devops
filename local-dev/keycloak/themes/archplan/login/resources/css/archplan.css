@@ -1,15 +1,17 @@
 :root {
-  --mo-gold: #d8ab41;
-  --mo-espresso: hsl(42, 33%, 13%);
-  --mo-ivory: #f4eee1;
-  --mo-lime: #54de6e;
-  --mo-rose: #ed7f97;
-  --mo-surface: #fff9ee;
-  --mo-outline: rgba(66, 47, 20, 0.18);
+  --mo-gold: #2563eb;
+  --mo-espresso: #111827;
+  --mo-ivory: #f9fafb;
+  --mo-lime: #10b981;
+  --mo-rose: #ef4444;
+  --mo-surface: #ffffff;
+  --mo-outline: #e5e7eb;
+  --mo-accent: #2563eb;
+  --mo-muted: rgba(55, 65, 81, 0.8);
   /* Replace the line below with `url("...")` to use a custom background image */
-  --mo-background-image: radial-gradient(circle at 20% -10%, #fff5dc, rgba(212, 192, 147, 0.65)),
-    linear-gradient(115deg, rgba(255, 255, 255, 0.2), rgba(216, 171, 65, 0.12)),
-    linear-gradient(225deg, rgba(0, 0, 0, 0.06), transparent);
+  --mo-background-image: radial-gradient(circle at 20% -10%, #ffffff, rgba(191, 219, 254, 0.55)),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.2), rgba(37, 99, 235, 0.12)),
+    linear-gradient(225deg, rgba(0, 0, 0, 0.04), transparent);
   --mo-font: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
@@ -60,7 +62,7 @@ body {
   background-image: url("../img/logo.png");
   background-size: cover;
   background-position: center;
-  border: 3px solid rgba(216, 171, 65, 0.5);
+  border: 3px solid rgba(37, 99, 235, 0.35);
   box-shadow: 0 15px 35px rgba(20, 13, 3, 0.25);
 }
 
@@ -70,13 +72,13 @@ body {
   height: 14px;
   border-radius: 50%;
   background: var(--mo-lime);
-  box-shadow: 16px -12px 0 var(--mo-rose);
+  box-shadow: 16px -12px 0 var(--mo-accent);
 }
 
 .card-pf {
   border: 1px solid var(--mo-outline);
   border-radius: 1.25rem;
-  box-shadow: 0 30px 60px rgba(18, 12, 4, 0.25);
+  box-shadow: 0 30px 60px rgba(17, 24, 39, 0.2);
   background: var(--mo-surface);
   color: var(--mo-espresso);
   padding: 2.5rem 2.75rem;
@@ -106,7 +108,7 @@ body {
 .pf-c-form-control:focus,
 .form-control:focus {
   border-color: var(--mo-gold);
-  box-shadow: 0 0 0 3px rgba(216, 171, 65, 0.25);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
 }
 
 .mo-login-shell {
@@ -118,7 +120,7 @@ body {
 
 .mo-login-hero {
   padding: 4rem 5vw;
-  background: linear-gradient(135deg, rgba(216, 171, 65, 0.85), rgba(84, 62, 27, 0.95)),
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(17, 24, 39, 0.95)),
     url("../img/globe.svg") no-repeat right 10% top 15%;
   background-size: auto 280px, contain;
   color: var(--mo-surface);
@@ -137,7 +139,7 @@ body {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--mo-espresso);
-  background: rgba(244, 238, 225, 0.9);
+  background: rgba(249, 250, 251, 0.95);
   padding: 0.35rem 0.9rem;
   border-radius: 999px;
 }
@@ -174,7 +176,7 @@ body {
   background: var(--mo-surface);
   border-radius: 1.5rem;
   padding: 2.75rem 3rem;
-  box-shadow: 0 35px 65px rgba(15, 10, 3, 0.2);
+  box-shadow: 0 35px 65px rgba(17, 24, 39, 0.18);
   border: 1px solid var(--mo-outline);
 }
 
@@ -213,8 +215,8 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 18px;
-  border: 3px solid rgba(216, 171, 65, 0.4);
-  box-shadow: 0 18px 40px rgba(18, 12, 4, 0.25);
+  border: 3px solid rgba(37, 99, 235, 0.3);
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.2);
 }
 
 .mo-brand__title {
@@ -224,7 +226,7 @@ body {
 }
 
 .mo-brand__subtitle {
-  color: rgba(84, 62, 27, 0.85);
+  color: var(--mo-muted);
   margin: 0.2rem 0 0;
 }
 
@@ -236,22 +238,22 @@ body {
 }
 
 .mo-alert--success {
-  background: rgba(84, 222, 110, 0.15);
-  color: #17692c;
-  border: 1px solid rgba(84, 222, 110, 0.4);
+  background: rgba(16, 185, 129, 0.12);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 .mo-alert--error {
-  background: rgba(237, 127, 151, 0.15);
-  color: #811b2f;
-  border: 1px solid rgba(237, 127, 151, 0.4);
+  background: rgba(239, 68, 68, 0.12);
+  color: #b91c1c;
+  border: 1px solid rgba(239, 68, 68, 0.35);
 }
 
 .mo-alert--info,
 .mo-alert--warning {
-  background: rgba(216, 171, 65, 0.15);
+  background: rgba(37, 99, 235, 0.12);
   color: var(--mo-espresso);
-  border: 1px solid rgba(216, 171, 65, 0.4);
+  border: 1px solid rgba(37, 99, 235, 0.35);
 }
 
 .box-container {
@@ -262,7 +264,7 @@ body {
 
 .mo-form-intro {
   margin: 0 0 0.5rem;
-  color: rgba(84, 62, 27, 0.85);
+  color: var(--mo-muted);
 }
 
 .field-group {
@@ -348,7 +350,7 @@ body {
 
 .form-link {
   font-weight: 600;
-  color: var(--mo-rose);
+  color: var(--mo-accent);
 }
 
 .form-actions {
@@ -356,21 +358,21 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--mo-gold), #f0c669);
+  background: linear-gradient(135deg, var(--mo-gold), #3b82f6);
   border: 0;
   border-radius: 999px;
-  color: var(--mo-espresso);
+  color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   padding-block: 0.85rem;
-  box-shadow: 0 15px 30px rgba(216, 171, 65, 0.35);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background: linear-gradient(135deg, #f7d171, var(--mo-gold));
-  color: var(--mo-espresso);
+  background: linear-gradient(135deg, #60a5fa, var(--mo-gold));
+  color: #ffffff;
 }
 
 .submit {
@@ -382,15 +384,15 @@ body {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: linear-gradient(120deg, var(--mo-gold), #f0c669);
-  color: var(--mo-espresso);
+  background: linear-gradient(120deg, var(--mo-gold), #3b82f6);
+  color: #ffffff;
   cursor: pointer;
-  box-shadow: 0 20px 35px rgba(216, 171, 65, 0.35);
+  box-shadow: 0 20px 35px rgba(37, 99, 235, 0.35);
 }
 
 .login-pf-page .card-pf .pf-c-button.pf-m-link,
 a {
-  color: var(--mo-rose);
+  color: var(--mo-accent);
 }
 
 .login-pf-page .card-pf .pf-c-button.pf-m-link:hover,
@@ -399,7 +401,7 @@ a:hover {
 }
 
 .pf-c-form__helper-text {
-  color: rgba(84, 62, 27, 0.8);
+  color: var(--mo-muted);
 }
 
 #kc-info,
@@ -407,7 +409,7 @@ a:hover {
   background: transparent;
   border: 1px dashed var(--mo-outline);
   border-radius: 0.9rem;
-  color: rgba(84, 62, 27, 0.75);
+  color: var(--mo-muted);
 }
 
 #kc-social-providers .kc-social-item {
@@ -424,7 +426,7 @@ a:hover {
   margin: 1.5rem 0;
   position: relative;
   font-weight: 600;
-  color: rgba(84, 62, 27, 0.7);
+  color: var(--mo-muted);
 }
 
 .social-divider::before,
@@ -448,18 +450,18 @@ a:hover {
 .mo-register {
   margin: 1rem 0 0;
   font-size: 0.95rem;
-  color: rgba(84, 62, 27, 0.85);
+  color: var(--mo-muted);
 }
 
 .mo-register a {
   font-weight: 600;
-  color: var(--mo-rose);
+  color: var(--mo-accent);
 }
 
 .mo-footer {
   margin-top: 2rem;
   text-align: center;
-  color: rgba(84, 62, 27, 0.7);
+  color: var(--mo-muted);
 }
 
 .mo-footer__note {
