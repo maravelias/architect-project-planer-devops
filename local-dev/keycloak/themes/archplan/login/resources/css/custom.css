@@ -1,73 +1,83 @@
 :root {
-  --app-font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
-    "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref",
-    sans-serif;
-  --app-primary: rgb(114, 22, 243);
-  --app-primary-10: rgba(114, 22, 243, 0.1);
-  --app-primary-50: rgba(114, 22, 243, 0.5);
-  --app-success: rgb(20, 184, 143);
-  --app-error: rgb(255, 56, 103);
-  --app-header: hsl(285, 35%, 15%);
-  --app-body: hsla(285, 40%, 16%, 0.94);
-  --app-secondary: hsla(285, 42%, 18%, 0.72);
-  --app-disabled: hsla(285, 50%, 22%, 0.26);
-  --app-bg: #e6e6e6;
+	--app-font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+	"DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref",
+	sans-serif;
+	--app-primary: rgb(114, 22, 243);
+	--app-primary-10: rgba(114, 22, 243, 0.1);
+	--app-primary-50: rgba(114, 22, 243, 0.5);
+	--app-success: rgb(20, 184, 143);
+	--app-error: rgb(255, 56, 103);
+	--app-header: hsl(285, 35%, 15%);
+	--app-body: hsla(285, 40%, 16%, 0.94);
+	--app-secondary: hsla(285, 42%, 18%, 0.72);
+	--app-disabled: hsla(285, 50%, 22%, 0.26);
+	--app-bg: #e6e6e6;
+}
+
+html.login-pf,
+body.login-pf {
+	background-color: var(--app-bg);
+	background-image: url("../img/background.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100%;
+	font-family: var(--app-font-family);
+	color: var(--app-body);
 }
 
 body.login-pf {
-  background-color: var(--app-bg);
-  font-family: var(--app-font-family);
-  color: var(--app-body);
+	min-height: 100vh;
 }
 
 #kc-header {
-  padding-top: 2rem;
+	padding-top: 2rem;
 }
 
 #kc-header-wrapper {
-  background: url("../img/logo.png") no-repeat center;
-  background-size: contain;
-  height: 216px;
-  margin: 0 auto;
-  text-indent: -9999px;
-  width: min(780px, 90vw);
+	background: url("../img/logo.png") no-repeat center;
+	background-size: contain;
+	height: 216px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	width: min(780px, 90vw);
 }
 
 @media (max-width: 768px) {
-  #kc-header-wrapper {
-    height: 140px;
-    width: min(520px, 90vw);
-  }
+	#kc-header-wrapper {
+		height: 140px;
+		width: min(520px, 90vw);
+	}
 }
 
 .pf-c-title {
-  color: var(--app-header);
+	color: var(--app-header);
 }
 
 .pf-c-form__label-text,
 .pf-c-input-group__text,
 .pf-c-button.pf-m-link {
-  color: var(--app-secondary);
+	color: var(--app-secondary);
 }
 
 .pf-c-button.pf-m-primary {
-  background-color: var(--app-primary);
-  border-color: var(--app-primary);
-  box-shadow: none;
+	background-color: var(--app-primary);
+	border-color: var(--app-primary);
+	box-shadow: none;
 }
 
 .pf-c-button.pf-m-primary:hover,
 .pf-c-button.pf-m-primary:focus {
-  background-color: #5b13c8;
-  border-color: #5b13c8;
-  box-shadow: none;
+	background-color: #5b13c8;
+	border-color: #5b13c8;
+	box-shadow: none;
 }
 
 .pf-c-button.pf-m-primary:active {
-  background-color: #4a0fa6;
-  border-color: #4a0fa6;
+	background-color: #4a0fa6;
+	border-color: #4a0fa6;
 }
 
 a {
-  color: var(--app-primary);
+	color: var(--app-primary);
 }
